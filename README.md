@@ -33,6 +33,7 @@ terraform {
     encrypt        = true
   }
 }
+```
 
 Why Remote Backend Is Important
 
