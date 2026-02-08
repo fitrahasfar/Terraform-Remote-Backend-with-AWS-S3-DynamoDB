@@ -121,5 +121,3 @@ terraform destroy (Restricted)
 - Never edit the Terraform state manually
 
 - Always use the correct AWS credentials and environment
-
-CI/CD pipeline integration
