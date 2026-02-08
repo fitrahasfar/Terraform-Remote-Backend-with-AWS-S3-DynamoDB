@@ -35,97 +35,91 @@ terraform {
 }
 ```
 
-Why Remote Backend Is Important
+## Why Remote Backend Is Important
 
 Terraform state may contain sensitive data such as:
 
-Resource IDs
+- Resource IDs
 
-Internal IP addresses
+- Internal IP addresses
 
-ARNs
+- ARNs
 
-Metadata
+- Metadata
 
 Using a remote backend provides:
 
-Protection against state loss
+- Protection against state loss
 
-Prevention of concurrent terraform apply
+- Prevention of concurrent terraform apply
 
-Safer collaboration for teams
+- Safer collaboration for teams
 
-Terraform Workflow Explanation
+## Terraform Workflow Explanation
 terraform init
 
-Initializes the working directory
+- Initializes the working directory
 
-Downloads required providers
+- Downloads required providers
 
-Configures the remote backend
+- Configures the remote backend
 
-Migrates local state to remote state (if exists)
+- Migrates local state to remote state (if exists)
 
-This command must be run first.
+- This command must be run first.
+
 
 terraform fmt
 
-Automatically formats Terraform files
+- Automatically formats Terraform files
 
-Keeps code clean and readable
+- Keeps code clean and readable
 
-Enforces standard style
+- Enforces standard style
+
 
 terraform validate
 
-Checks Terraform configuration syntax
+- Checks Terraform configuration syntax
 
-Ensures the configuration is logically valid
+- Ensures the configuration is logically valid
 
-Does not contact AWS
+- Does not contact AWS
+
 
 terraform plan
 
-Shows what Terraform will change
+- Shows what Terraform will change
 
-No resources are created or modified
+- No resources are created or modified
 
-Used to review changes before applying
+- Used to review changes before applying
 
 terraform apply
 
-Applies the planned changes
+- Applies the planned changes
 
-Creates or updates resources
+- Creates or updates resources
 
-Uses DynamoDB to prevent concurrent execution
+- Uses DynamoDB to prevent concurrent execution
+
 
 terraform destroy (Restricted)
 
-Destroys managed infrastructure
+- Destroys managed infrastructure
 
-Should be limited to specific users or environments
+- Should be limited to specific users or environments
 
-Not recommended for production without safeguards
+- Not recommended for production without safeguards
 
-Notes
+## **Notes**
 
-Local terraform.tfstate is no longer used
+- Local terraform.tfstate is no longer used
 
-State is fully managed in S3 after initialization
+- State is fully managed in S3 after initialization
 
-Never edit the Terraform state manually
+- Never edit the Terraform state manually
 
-Always use the correct AWS credentials and environment
-
-Intended Usage
-
-This project is suitable for:
-
-Learning Terraform remote backend
-
-Production-ready Terraform setup
-
-Team-based infrastructure workflows
+- Always use the correct AWS credentials and environment
 
 CI/CD pipeline integration
