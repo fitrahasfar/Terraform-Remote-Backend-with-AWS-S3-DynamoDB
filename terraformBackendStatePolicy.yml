@@ -1,0 +1,35 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "TerraformStateS3Access",
+			"Effect": "Allow",
+			"Action": [
+				"s3:ListBucket",
+				"s3:GetBucketVersioning"
+			],
+			"Resource": "arn:aws:s3:::terraform-state-production-243111"
+		},
+		{
+			"Sid": "TerraformStateS3ObjectAccess",
+			"Effect": "Allow",
+			"Action": [
+				"s3:GetObject",
+				"s3:PutObject",
+				"s3:DeleteObject"
+			],
+			"Resource": "arn:aws:s3:::terraform-state-production-243111/*"
+		},
+		{
+			"Sid": "TerraformStateLockDynamoDB",
+			"Effect": "Allow",
+			"Action": [
+				"dynamodb:DescribeTable",
+				"dynamodb:GetItem",
+				"dynamodb:PutItem",
+				"dynamodb:DeleteItem"
+			],
+			"Resource": "arn:aws:dynamodb:ap-southeast-1:430504595234:table/terraform-state-production-243111-lock"
+		}
+	]
+}

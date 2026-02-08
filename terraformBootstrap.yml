@@ -1,0 +1,53 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "VisualEditor0",
+			"Effect": "Allow",
+			"Action": [
+				"s3:GetLifecycleConfiguration",
+				"s3:GetBucketTagging",
+				"s3:PutAccelerateConfiguration",
+				"s3:GetBucketLogging",
+				"s3:CreateBucket",
+				"dynamodb:ListTagsOfResource",
+				"s3:GetAccelerateConfiguration",
+				"dynamodb:DeleteTable",
+				"s3:GetBucketPolicy",
+				"s3:PutEncryptionConfiguration",
+				"s3:GetEncryptionConfiguration",
+				"s3:GetBucketObjectLockConfiguration",
+				"dynamodb:TagResource",
+				"s3:PutBucketTagging",
+				"s3:GetBucketRequestPayment",
+				"dynamodb:DescribeTable",
+				"s3:PutLifecycleConfiguration",
+				"s3:PutBucketAcl",
+				"dynamodb:DescribeContinuousBackups",
+				"s3:GetBucketOwnershipControls",
+				"s3:DeleteBucket",
+				"s3:PutBucketVersioning",
+				"s3:GetBucketPublicAccessBlock",
+				"s3:PutBucketPublicAccessBlock",
+				"s3:GetBucketWebsite",
+				"dynamodb:UntagResource",
+				"s3:PutBucketOwnershipControls",
+				"s3:GetBucketVersioning",
+				"s3:PutBucketCORS",
+				"s3:GetBucketAcl",
+				"s3:DeleteBucketPolicy",
+				"dynamodb:DescribeTimeToLive",
+				"s3:GetReplicationConfiguration",
+				"dynamodb:CreateTable",
+				"s3:PutBucketWebsite",
+				"s3:PutBucketRequestPayment",
+				"s3:PutBucketLogging",
+				"s3:GetBucketCORS",
+				"s3:PutBucketPolicy",
+				"s3:GetBucketLocation",
+				"dynamodb:UpdateTable"
+			],
+			"Resource": "*"
+		}
+	]
+}
