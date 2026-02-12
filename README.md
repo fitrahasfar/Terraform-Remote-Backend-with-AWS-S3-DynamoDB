@@ -121,3 +121,8 @@ terraform destroy (Restricted)
 - Never edit the Terraform state manually
 
 - Always use the correct AWS credentials and environment
+
+## Example running project
+terraform apply \
+  -var="terraform_state_bucket_name='Unique name project'" \
+  -var="terraform_state_lock_table_name='s3_name-lock'"
