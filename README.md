@@ -124,5 +124,5 @@ terraform destroy (Restricted)
 
 ## Example running project
 terraform apply \
-  -var="terraform_state_bucket_name='Unique name project'" \
-  -var="terraform_state_lock_table_name='s3_name-lock'"
+    -var="terraform_state_bucket_name='Unique name project'" \
+    -var="terraform_state_lock_table_name='s3_name-lock'"
